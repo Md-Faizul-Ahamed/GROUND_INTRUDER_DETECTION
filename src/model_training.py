@@ -5,7 +5,6 @@ import os  # Import os to work with directories
 from . import data_processing as dp
 
 def train_model(X, y):
-    """Train a decision tree model."""
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
