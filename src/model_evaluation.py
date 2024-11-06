@@ -3,7 +3,6 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from . import data_processing as dp
 
 def evaluate_model(X_test, y_test):
-    """Evaluate the decision tree model."""
     # Load the trained model
     model = joblib.load('model/decision_tree_model.joblib')
     
