@@ -4,7 +4,6 @@ import joblib
 from . import data_processing as dp
 
 def visualize_tree():
-    """Visualize the decision tree."""
     model = joblib.load('model/decision_tree_model.joblib')
     
     plt.figure(figsize=(12, 8))
