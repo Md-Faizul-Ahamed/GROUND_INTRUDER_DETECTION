@@ -3,13 +3,10 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from . import data_processing as dp
 
 def evaluate_model(X_test, y_test):
-    # Load the trained model
     model = joblib.load('model/decision_tree_model.joblib')
     
-    # Make predictions
     y_pred = model.predict(X_test)
     
-    # Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f'Accuracy: {accuracy:.2f}')
     print("Classification Report:\n", classification_report(y_test, y_pred))
